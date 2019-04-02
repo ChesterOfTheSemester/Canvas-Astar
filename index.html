@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="main.js"></script>
+
+    <style>
+        form label
+        {
+            display: block;
+        }
+        
+        form label > *
+        {
+            float: left;
+            display: inline-block;
+        }
+
+        form label div
+        {
+            width: 15px;
+            height: 15px;
+        }
+
+        form label[type="1"] div { background-color: blue }
+        form label[type="2"] div { background-color: red }
+        form label[type="3"] div { background-color: black }
+    </style>
+    <script defer>
+
+    </script>
+
+    <style>
+        html, body {
+            width: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<svg id="display" width="750" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+
+<form>
+    <span>Select input type:</span>
+
+    <label type="1">
+        <div></div>
+        Finder
+        <input onclick="window.typeSelect = 1;" type="radio" name="select"/>
+    </label>
+
+    <label type="2">
+        <div></div>
+        Target
+        <input onclick="window.typeSelect = 2;" type="radio" name="select"/>
+    </label>
+
+    <label type="3">
+        <div></div>
+        Obstacle
+        <input onclick="window.typeSelect = 3" type="radio" name="select"/>
+    </label>
+
+    <input type="button" id="reset" value="Reset"/>
+    <input type="button" id="run" value="Run"/>
+</form>
+
+</body>
+</html>
